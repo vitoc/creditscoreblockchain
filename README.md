@@ -28,7 +28,7 @@ The first thing to obtain and setup is the RPC endpoint.
 
 If you'd followed the [example on Azure architecture center][architecture], this information is in the e-mail that's sent to you upon successful deployment:
 
-<img src="https://github.com/vitoc/creditscoreblockchain/blob/master/media/mail.png">
+<img src="https://github.com/vitoc/creditscoreblockchain/blob/master/media/mail.png" width="500" />
 
 Place this endpoint within a `constants.js` file that you'll need to create within the directory where this repository is cloned:
 
