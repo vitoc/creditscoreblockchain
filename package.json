@@ -1,0 +1,29 @@
+{
+  "name": "creditscorechain",
+  "version": "1.0.0",
+  "description": "This is a readable blockchain application that is based on a minimalist credit score sharing scenario",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitoc/creditscoreblockchain.git"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "poa",
+    "nodejs",
+    "solidity"
+  ],
+  "author": "Vito Chin <gawsai@hotmail.co.uk>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/vitoc/creditscoreblockchain/issues"
+  },
+  "homepage": "https://github.com/vitoc/creditscoreblockchain#readme",
+  "dependencies": {
+    "solc": "^0.4.25"
+  }
+}

@@ -1,6 +1,12 @@
-This is a minimal example of how information can be shared between participants of a blockchain.
+# Decentralized Trust with Ethereum (Minimalist Credit Score Scenario)
+
+This is a readable blockchain application that is based on a minimalist credit score sharing scenario. It shows how information can be shared between participants of a blockchain.
 
 It is part of the [Decentralized Trust example scenario on Azure Architecture Center][architecture].
+
+Besides the smart contract, this repository provides all of the code required to compile, deploy and communicate with the smart contract on the blockchain. It can be used as a starting point for your decentralized trust project. The compilation, deployment and various other components can also be used as boilerplate and tools within your own project.
+
+Ethers.js[ethers] is used throughout this application because I like it more than the more common Web3.js. 
 
 Going through this README and the various referred portions of files within this repository, you will get an understanding of smart contracts and how it works within a blockchain to enable trusted exchange and sharing of information.
 
@@ -8,7 +14,7 @@ Going through this README and the various referred portions of files within this
 
 You will need to have an Ethereum blockchain.
 
-You can create a private blockchain on Azure to follow this guide. Please refer to the [Decentralized Trust example scenario on Azure Architecture Center][architecture] for more information. The rest of this guide assume
+You can create a private blockchain on Azure to follow this guide. Please refer to the [Decentralized Trust example scenario on Azure Architecture Center][architecture] for more information. 
 
 To run the code within this guide, you'll need Node.js and NPM.
 
@@ -37,8 +43,6 @@ export const JSON_RPC_ENDPOINT = 'YOUR JSON-RPC ENDPOINT HERE';
 ```
 >  Do note that `constants.js` is not in the cloned repository, you'll need to create one for this purpose. 
 
-[architecture]: https://docs.microsoft.com/en-us/azure/architecture/example-scenario/apps/decentralized-trust
-
 ## Chain ID
 
 This is to ensure we're dealing with the right chain! 
@@ -49,5 +53,13 @@ Place this in the `constants.js` file as well:
 
 ```js
 export const JSON_RPC_ENDPOINT = 'YOUR JSON-RPC ENDPOINT HERE';
-export const CHAIN_ID = 'YOUR CHAIN ID HERE';
+export const CHAIN_ID = 10101010; // <== YOUR CHAIN ID HERE
 ```
+
+## Thank you
+
+If you like this, do consider following me on Twitter[twitter].
+
+[architecture]: https://docs.microsoft.com/en-us/azure/architecture/example-scenario/apps/decentralized-trust
+[ethers]: https://github.com/ethers-io/ethers.js/
+[twitter]: https://twitter.com/vitoc/
