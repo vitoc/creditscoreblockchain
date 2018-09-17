@@ -18,12 +18,13 @@
     "solidity"
   ],
   "author": "Vito Chin <gawsai@hotmail.co.uk>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/vitoc/creditscoreblockchain/issues"
   },
   "homepage": "https://github.com/vitoc/creditscoreblockchain#readme",
   "dependencies": {
+    "ethers": "^3.0.27",
     "solc": "^0.4.25"
   }
 }

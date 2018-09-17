@@ -1,4 +1,4 @@
-# Decentralized Trust with Ethereum (Minimalist Credit Score Scenario)
+# Decentralized Trust with Ethereum (Credit Score Scenario)
 
 This is a readable blockchain application that is based on a minimalist credit score sharing scenario. It shows how information can be shared between participants of a blockchain.
 
@@ -56,9 +56,39 @@ export const JSON_RPC_ENDPOINT = 'YOUR JSON-RPC ENDPOINT HERE';
 export const CHAIN_ID = 10101010; // <== YOUR CHAIN ID HERE
 ```
 
+## Compiling
+
+The ABI and bytecode necessary to deploy the smart contract to your Ethereum blockchain is included in this repository. Also included  is a tool that you can use to quickly (re)-compile the contract again when you make any changes, etc. This is how to use it:
+
+```console
+$ node compile.js contract.sol :contractName
+```
+
+For the scenario, to re-compile, do:
+
+```console
+$ node compile.js CreditScore.sol :CreditScore
+```
+
+## Wallet
+
+For convenience, this application reads the keys of 3 required wallets from 3 files:
+
+* bankA.wallet
+* bankB.wallet
+* personA.wallet
+
+For testing purposes, you can generate the above wallet by running:
+
+```console
+$ node generate_wallet.js
+```
+
+Of course, you can create these private keys yourself with the tools that you prefer too.
+
 ## Thank you
 
-If you like this, do consider following me on Twitter[twitter].
+If you like this, do consider following me on [Twitter][twitter].
 
 [architecture]: https://docs.microsoft.com/en-us/azure/architecture/example-scenario/apps/decentralized-trust
 [ethers]: https://github.com/ethers-io/ethers.js/
