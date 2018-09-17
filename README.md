@@ -126,7 +126,7 @@ $ node enroll.js [YOUR CONTRACT'S ADDRESS] [BANK B'S ADDRESS]
 Here's where we finally update a credit score of a person:
 
 ```console
-node score.js [YOUR CONTRACT'S ADDRESS] [PERSON A'S ADDRESS] 80
+$ node score.js [YOUR CONTRACT'S ADDRESS] [PERSON A'S ADDRESS] 80
 ```
 
 You can replace 80 with any score you want. A transaction will be created to store the person's latest credit score within the blockchain. 
