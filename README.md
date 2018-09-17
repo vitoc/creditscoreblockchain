@@ -1,6 +1,6 @@
 # Decentralized Trust with Ethereum (Credit Score Scenario)
 
-This is a readable blockchain application that is based on a minimalist credit score sharing scenario. It shows how information can be shared between participants of a blockchain.
+This is a readable Ethereum DApp written in Solidity (and Node.js) that is based on a minimalist credit score sharing scenario. It shows how information can be shared between participants of a blockchain.
 
 It is part of the [Decentralized Trust example scenario on Azure Architecture Center][architecture].
 
@@ -89,6 +89,61 @@ $ node generate_wallet.js
 ```
 
 Of course, you can create these private keys yourself with the tools that you prefer too.
+
+## Deploying the contract to the blockchain
+
+With that, we can now deploy the contract to the blockchain:
+
+```console
+$ node deploy_contract.js bankA.wallet
+```
+
+Here, we use bank A's wallet to create the transaction for deployment so it is the owner of the contract. Once done, the contract's address will be shown to you. Note this down!
+
+## Getting addresses of banks and persons
+
+There's a nifty tool in this repository that'll show an bank or a person's address on the blockchain when given the private key of the entity:
+
+```console
+$ node address.js bankB.wallet
+Wallet address: 0xa8F782D3dAAAAA1F1452aA9e9628cD9YYYYYAa63
+```
+
+You'll need the addresses that are printed to screen for various reasons in subsequent calls to the blockchain.
+
+## Allowing other banks to update credit scores
+
+There is a safety check within the contract to allow only enrolled banks to update scores (we certainly don't want people updating their own scores!). 
+
+Currently, bank A is the only entity that's allowed to update credit scores. To allow more bank B to do this as well:
+
+```console
+$ node enroll.js [YOUR CONTRACT'S ADDRESS] [BANK B'S ADDRESS]
+```
+
+## Updating the credit score of a person
+
+Here's where we finally update a credit score of a person:
+
+```console
+node score.js [YOUR CONTRACT'S ADDRESS] [PERSON A'S ADDRESS] 80
+```
+
+You can replace 80 with any score you want. A transaction will be created to store the person's latest credit score within the blockchain. 
+
+## Retrieving the score
+
+If you dig into the code of the command below, you'll see that a wallet is required to view records on the blockchain:
+
+```console
+$ node score.js [YOUR CONTRACT'S ADDRESS] [PERSON A'S ADDRESS] [ANY POSITIVE INTEGER INDICATING THE SCORE]
+$ node retrieve [YOUR CONTRACT'S ADDRESS] [PERSON A'S ADDRESS]
+Credit Score: 80
+```
+
+## That's it!
+
+The aim here is to give you an end-to-end walkthrough from creating a contract up to the point where the contract can be used to store and share information based on decentralized trust on the blockchain. Have a look at the code within the commands above to see how [Ethers.js][ethers] is used with Node.js to achieve the functionalities of the DApp.
 
 ## Thank you
 

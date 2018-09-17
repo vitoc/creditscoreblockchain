@@ -1,8 +1,8 @@
 const ethers = require('ethers');
-const blockchain = require('./blockchain');
+const provider = require('./provider');
 const fs = require('fs');
 
 const personPrivateKey = fs.readFileSync(process.argv[2]).toString();
-const wallet = new ethers.Wallet(personPrivateKey, blockchain.provider);
+const wallet = new ethers.Wallet(personPrivateKey, provider);
 
 console.log(`Wallet address: ${wallet.address}`);

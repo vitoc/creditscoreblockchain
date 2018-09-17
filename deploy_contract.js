@@ -1,8 +1,8 @@
-const blockchain = require('./blockchain');
+const provider = require('./provider');
 var ethers = require('ethers');
 const fs = require('fs');
 const ownerPrivateKey = fs.readFileSync(process.argv[2]).toString();
-const wallet = new ethers.Wallet(ownerPrivateKey, blockchain.provider);
+const wallet = new ethers.Wallet(ownerPrivateKey, provider);
 
 const bytecodeFile = 'contract.bytecode'; //Default 
 const abiFile = 'contract.abi'; //Default 
