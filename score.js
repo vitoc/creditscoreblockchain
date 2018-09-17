@@ -2,8 +2,8 @@ const ethers = require('ethers');
 const blockchain = require('./blockchain');
 const fs = require('fs');
 
-const personPrivateKey = fs.readFileSync('personA.wallet').toString();
-const wallet = new ethers.Wallet(personPrivateKey, blockchain.provider);
+const bankBPrivateKey = fs.readFileSync('bankB.wallet').toString();
+const wallet = new ethers.Wallet(bankBPrivateKey, blockchain.provider);
 
 const abi = JSON.parse(fs.readFileSync('contract.abi'));
 var contract = new ethers.Contract(process.argv[2], abi, wallet);

@@ -6,7 +6,7 @@ It is part of the [Decentralized Trust example scenario on Azure Architecture Ce
 
 Besides the smart contract, this repository provides all of the code required to compile, deploy and communicate with the smart contract on the blockchain. It can be used as a starting point for your decentralized trust project. The compilation, deployment and various other components can also be used as boilerplate and tools within your own project.
 
-Ethers.js[ethers] is used throughout this application because I like it more than the more common Web3.js. 
+[Ethers.js][ethers] is used throughout this application because I like it more than the more common Web3.js. 
 
 Going through this README and the various referred portions of files within this repository, you will get an understanding of smart contracts and how it works within a blockchain to enable trusted exchange and sharing of information.
 
