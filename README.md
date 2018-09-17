@@ -39,7 +39,9 @@ If you'd followed the [example on Azure architecture center][architecture], this
 Place this endpoint within a `constants.js` file that you'll need to create within the directory where this repository is cloned:
 
 ```js
-export const JSON_RPC_ENDPOINT = 'YOUR JSON-RPC ENDPOINT HERE';
+const constants = {
+    JSON_RPC_ENDPOINT: 'http://ethzgpjre-dns-reg1.southeastasia.cloudapp.azure.com:8540'
+}
 ```
 >  Do note that `constants.js` is not in the cloned repository, you'll need to create one for this purpose. 
 
@@ -52,8 +54,10 @@ If you'd followed the [example on Azure architecture center][architecture], this
 Place this in the `constants.js` file as well:
 
 ```js
-export const JSON_RPC_ENDPOINT = 'YOUR JSON-RPC ENDPOINT HERE';
-export const CHAIN_ID = 10101010; // <== YOUR CHAIN ID HERE
+const constants = {
+    JSON_RPC_ENDPOINT: 'http://ethzgpjre-dns-reg1.southeastasia.cloudapp.azure.com:8540',
+    CHAIN_ID: 10101010// <== YOUR CHAIN ID HERE
+}
 ```
 
 ## Compiling
