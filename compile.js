@@ -9,6 +9,8 @@ const solc = require('solc');
 const contractSource = fs.readFileSync(process.argv[2]);
 const compiled = solc.compile(contractSource.toString(), 1);
 
+console.log(compiled);
+
 const abi = compiled.contracts[process.argv[3]].interface;
 var astream = fs.createWriteStream('./contract.abi');
 astream.write(abi);

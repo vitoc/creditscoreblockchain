@@ -70,7 +70,7 @@ For the scenario, to re-compile, do:
 $ node compile.js CreditScore.sol :CreditScore
 ```
 
-## Wallet
+## Wallets
 
 For convenience, this application reads the keys of 3 required wallets from 3 files:
 
