@@ -1,5 +1,5 @@
 const ethers = require('ethers');
-const blockchain = require('./provider');
+const provider = require('./provider');
 const fs = require('fs');
 
 const bankAPrivateKey = fs.readFileSync('bankA.wallet').toString();

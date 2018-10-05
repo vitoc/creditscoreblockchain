@@ -16,6 +16,12 @@ You will need to have an Ethereum blockchain.
 
 You can create a private blockchain on Azure to follow this guide. Please refer to the [Decentralized Trust example scenario on Azure Architecture Center][architecture] for more information. 
 
+For development purposes, you can follow along with this guide for starters with Ganache:
+
+```console
+$ ganache-cli -i 10101010 -g 0
+```
+
 To run the code within this guide, you'll need Node.js and NPM.
 
 ## Installation
