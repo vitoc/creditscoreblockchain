@@ -42,6 +42,8 @@ Place this endpoint within a `constants.js` file that you'll need to create with
 const constants = {
     JSON_RPC_ENDPOINT: 'http://ethzgpjre-dns-reg1.southeastasia.cloudapp.azure.com:8540'
 }
+
+module.exports = constants;
 ```
 >  Do note that `constants.js` is not in the cloned repository, you'll need to create one for this purpose. 
 
@@ -58,6 +60,8 @@ const constants = {
     JSON_RPC_ENDPOINT: 'http://ethzgpjre-dns-reg1.southeastasia.cloudapp.azure.com:8540',
     CHAIN_ID: 10101010// <== YOUR CHAIN ID HERE
 }
+
+module.exports = constants;
 ```
 
 ## Compiling
