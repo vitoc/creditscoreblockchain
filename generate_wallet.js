@@ -16,3 +16,8 @@ var walletP = Wallet.createRandom();
 var pStream = fs.createWriteStream('./personA.wallet');
 pStream.write(walletP.privateKey);
 pStream.end();
+
+var walletPB = Wallet.createRandom();
+var pbStream = fs.createWriteStream('./personB.wallet');
+pbStream.write(walletPB.privateKey);
+pbStream.end();

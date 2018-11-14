@@ -57,7 +57,7 @@ module.exports = constants;
 
 This is to ensure we're dealing with the right chain! 
 
-If you'd followed the [example on Azure architecture center][architecture], this is the `Network ID` that you had specified while creating the private blockchain via.
+If you'd followed the [example on Azure architecture center][architecture], this is the `Network ID` that you had specified while creating the private blockchain via the Azure Portal.
 
 Place this in the `constants.js` file as well:
 
@@ -139,14 +139,13 @@ Here's where we finally update a credit score of a person:
 $ node score.js [YOUR CONTRACT'S ADDRESS] [PERSON A'S ADDRESS] 80
 ```
 
-You can replace 80 with any score you want. A transaction will be created to store the person's latest credit score within the blockchain. 
+You can replace 80 with any score you want (has to be a positive integer). A transaction will be created to store the person's latest credit score within the blockchain. 
 
 ## Retrieving the score
 
 If you dig into the code of the command below, you'll see that a wallet is required to view records on the blockchain:
 
 ```console
-$ node score.js [YOUR CONTRACT'S ADDRESS] [PERSON A'S ADDRESS] [ANY POSITIVE INTEGER INDICATING THE SCORE]
 $ node retrieve [YOUR CONTRACT'S ADDRESS] [PERSON A'S ADDRESS]
 Credit Score: 80
 ```
