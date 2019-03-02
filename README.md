@@ -131,12 +131,18 @@ Currently, bank A is the only entity that's allowed to update credit scores. To 
 $ node enroll.js [YOUR CONTRACT'S ADDRESS] [BANK B'S ADDRESS]
 ```
 
-## Updating the credit score of a person
+## Creating/Updating the credit score of a person
 
-Here's where we finally update a credit score of a person:
+Here's where we finally create a credit score for a person.
+
+For the sake of example, let's assign a credit score for person A. First, we need to get person A's wallet address:
+
+$ node address.js personA.wallet
+
+Then we assign a score of 80 to person A (as identified by the wallet address):
 
 ```console
-$ node score.js [YOUR CONTRACT'S ADDRESS] [PERSON A'S ADDRESS] 80
+$ node score.js [YOUR CONTRACT'S ADDRESS] [PERSON A'S WALLET ADDRESS] 80
 ```
 
 You can replace 80 with any score you want (has to be a positive integer). A transaction will be created to store the person's latest credit score within the blockchain. 
@@ -146,7 +152,7 @@ You can replace 80 with any score you want (has to be a positive integer). A tra
 If you dig into the code of the command below, you'll see that a wallet is required to view records on the blockchain:
 
 ```console
-$ node retrieve [YOUR CONTRACT'S ADDRESS] [PERSON A'S ADDRESS]
+$ node retrieve.js [YOUR CONTRACT'S ADDRESS] [PERSON A'S ADDRESS]
 Credit Score: 80
 ```
 
